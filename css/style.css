@@ -54,12 +54,12 @@ body {
 
 .menu-nav ul li {
 	display: inline-block;
-	margin-right: 10px;
+	margin: 0 10px;
 }
 
 .menu-nav ul li a {
 	font-size: 1.125em;
-	margin: 0 6px;
+	/*margin: 0 10px;*/
 }
 
 .menu-nav ul li:first-child a {
