@@ -1,0 +1,71 @@
+/* Reset e Estilos Gerais */
+
+body, p, h1, ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #252525;
+}
+
+body {
+	font-family: Georgia, serif;
+	color: #252525;
+	background-color: #e7e4d8;
+}
+ 
+* {
+	box-sizing: border-box;
+}
+
+/* Fim Reset e Estilos Gerais */
+
+/* Menu */
+
+.menu {
+	padding: 20px;
+	background-color: #d6d3c8;
+}
+
+.menu::before, .menu::after { /* clearfix */
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.menu-logo {
+	float: left;
+}
+
+.menu-nav {
+	float: right;
+}
+
+.menu-nav ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.menu-nav ul li a {
+	font-size: 1.125em;
+	margin: 0 6px;
+}
+
+.menu-nav ul li:first-child a {
+	margin-left: 0;
+}
+
+
+
+/* Fim Menu */
