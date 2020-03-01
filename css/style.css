@@ -54,16 +54,36 @@ body {
 
 .menu-nav ul li {
 	display: inline-block;
-	margin: 0 10px;
+	/*margin: 0 10px;*/
 }
 
 .menu-nav ul li a {
 	font-size: 1.125em;
-	/*margin: 0 10px;*/
+	margin: 0 10px;
 }
 
 .menu-nav ul li:first-child a {
 	margin-left: 0;
+}
+
+@media only screen and (max-width: 739px) {
+	.menu-logo {
+		float: none;
+	}
+
+	.menu-logo img {
+		margin: 0 auto;
+	}
+
+	.menu-nav {
+		float: none;
+		margin-top: 10px;
+	}
+
+	.menu-nav ul {
+		text-align: center; /* alinhando menu ao centro */
+	}
+
 }
 
 /* Fim Menu */
@@ -95,7 +115,7 @@ body {
 	padding: 20px;
 }
 
-.main-nav ul li a::before {
+.main-nav li a::before {
 	content: '';
 	display: inline-block; /* para ficar na mesma linha os itens */
 	width: 24px;
@@ -131,6 +151,50 @@ body {
 	background-position: 0 -120px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
 }
 
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+	.main-nav {
+		width: 200px;
+	}
+
+	.main-nav a {
+		font-size: 0.875em; /* diminuindo a fonte para não ficar quebrado no tablet o texto */
+	}
+}
+
+@media only screen and (max-width: 739px) {
+	.main-container {
+		flex-direction: column; /* mudando layout do site para coluna */
+	}
+
+	.main-nav {
+		float: none;
+		background: none;
+		margin: 20px 0 0 20px; /* separando conteúdo */
+		width: auto; /* largura automática de acordo com o tamanho ocupado */
+	}
+
+	.main-nav li {
+		display: inline-block; /* para manter na mesma linha o conteúdo */
+	}
+
+	.main-nav ul li a::before {
+		display: block; /* para o a ocupar todo o espaço dele e pegar o width e heigth */
+		margin: 0px;
+		top: 0px; /* para centralizar o ícone dentro do seu quadrado */
+	}
+
+	.main-nav a {
+		width: 44px; /* distância boa para um dedo clicar */
+		height: 44px;
+		border: none;
+		overflow: hidden;
+		padding: 10px;
+		color: #252525;
+		background-color: #252525;
+		border-radius: 4px;
+		margin: 10px 10px 10px 0; /* para a esquerda não está adicionado espaço, pois já têm 20px */
+	}
+}
 
 /* Fim Menu Principal */
 
@@ -211,7 +275,7 @@ body {
 }
 
 .produtos-item li {
-	padding: 13px 0;
+	padding: 12px 0;
 	border-bottom: 1px solid #e7e4d8;
 
 	font-size: 1.125em;
@@ -227,6 +291,38 @@ body {
 	font-weight: bold;
 	width: 80px;
 	display: inline-block; /* por padrão a tag span é inline, alterando para inline-block para manter o contéudo na mesma linha e para que possa pegar o width, pois elementos inline não é possível definir tamanhos */
+}
+
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+	.produtos {
+		width: calc(100% - 200px);
+	}
+}
+
+@media only screen and (max-width: 739px) {
+	.produtos {
+		width: 100%;
+	}
+
+	.produtos h1 {
+		float: none;
+	}
+
+	.produtos header a {
+		float: none;
+		display: inline-block;
+		margin-top: 20px;
+	}
+
+	.produtos-item img {
+		float: none;
+		/*margin: 0 auto;*/
+	}
+
+	.produtos-item ul {
+		float: none;
+		width: 100%;
+	}
 }
 
 /* Fim Produtos */
