@@ -66,6 +66,162 @@ body {
 	margin-left: 0;
 }
 
-
-
 /* Fim Menu */
+
+/* Menu Principal */
+
+.main-container::before, .main-container::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.main-nav {
+	width: 300px;
+	background: #252525;
+	float: left;
+}
+
+.main-nav a {
+	display: block;
+	color: #fff;
+	border-bottom: 3px solid #484846;
+	font-size: 1.125em;
+	padding: 20px;
+}
+
+.main-nav ul li a::before {
+	content: '';
+	display: inline-block; /* para ficar na mesma linha os itens */
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icones.png'); /* imagem que será usada dos ícones, a posição do background será alterada com position para que seja exibido os ícones corretos, é usado apenas uma imagem para não precisar ficar carregando várias imagens */
+	margin-right: 20px;
+
+	position: relative; /* posição relativa a ele mesmo, pode mudar de local, mas continua existindo com uma sombra na posição original */
+	top: 5px; /* usado para centralizar o ícone */
+}
+
+.main-contabilidade::before { 
+	background-position: 0 0; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+.main-produtos::before {
+	background-position: 0 -24px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+.main-paginas::before {
+	background-position: 0 -48px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+.main-plugins::before {
+	background-position: 0 -72px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+.main-formularios::before {
+	background-position: 0 -96px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+.main-hospedagem::before {
+	background-position: 0 -120px; /* primeiro valor relacionado a direita e esquerda, segundo valor para cima e para baixo */
+}
+
+
+/* Fim Menu Principal */
+
+/* Produtos */
+
+.produtos {
+	float: left;
+	width: calc(100% - 300px);
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.produtos header::before, .produtos header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.produtos h1 {
+	font-size: 2.5em;
+	float: left;
+}
+
+.produtos header a {
+	float: right;
+	background-color: #c17139;
+	color: #e7e4d8;
+	font-size: 1.125em;
+	font-family: Courier, monospace;
+	text-transform: uppercase;
+	padding: 15px 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+
+.produtos-item {
+	background-color: #fff;
+
+	position: relative; /* definindo posição relative, pois um elemento pai têm que ser relativo para que conseguir usar o absolute a do ícone do editar */
+	margin-top: 40px;
+
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35); /* o primeiro valor corresponde à distância horizontal da sombra, o segundo à vertical, o terceiro o blur(“o quanto borrada a sombra deve ser”), o quarto valor é o tamanho da sombra, o quinto é a cor em rgba sendo o a para definir a transparência da sombra */
+}
+
+.produtos-item::before, .produtos-item::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.produtos-item img {
+	float: left;
+}
+
+.produtos-item a {
+	width: 24px;
+	height: 24px;
+
+	overflow: hidden; /* tudo que sair do container será escondido na tela */
+	text-indent: -200px; /* movendo o texto para o lado esquerdo para esconder ele na tela */
+	position: absolute; /* text-indent não funciona em elementos inline, posição absoluta usa a posição do elemento pai como referencia no caso o produtos-item, caso o produtos-item não tivesse nenhum position iria buscar pelo main-container, dai caso esse também não tivesse nada, se posicionaria de acordo com o body, alterado a posição do elemento também permite movimentar uma elemento inline com o text-indent */
+	background: url('../img/edit.svg') no-repeat;
+
+	top: 10px;
+	right: 20px;
+}
+
+.produtos-item a:hover {
+	background: url('../img/edit-hover.svg') no-repeat;
+}
+
+.produtos-item ul {
+	width: calc(100% - 140px);
+	padding: 0 20px; /* utilizado padding e não margin, pois o padding é adicionado no tamanho do width, por causa da propriedade box-sizing: border-box;, o margin é somado, então caso optar pelo margin no lugar do padding, será necessário adicionar -180px para funcionar */
+	float: left;
+}
+
+.produtos-item li {
+	padding: 13px 0;
+	border-bottom: 1px solid #e7e4d8;
+
+	font-size: 1.125em;
+	font-family: Courier, monospace;
+
+}
+
+.produtos-item li:last-child {
+	border-bottom: none;
+}
+
+.produtos-item span {
+	font-weight: bold;
+	width: 80px;
+	display: inline-block; /* por padrão a tag span é inline, alterando para inline-block para manter o contéudo na mesma linha e para que possa pegar o width, pois elementos inline não é possível definir tamanhos */
+}
+
+/* Fim Produtos */
