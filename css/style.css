@@ -84,6 +84,11 @@ body {
 		text-align: center; /* alinhando menu ao centro */
 	}
 
+	.menu-nav ul li a {
+		margin: 0 5px;
+		font-size: 1em;
+	}
+
 }
 
 /* Fim Menu */
@@ -192,7 +197,7 @@ body {
 		color: #252525;
 		background-color: #252525;
 		border-radius: 4px;
-		margin: 10px 10px 10px 0; /* para a esquerda não está adicionado espaço, pois já têm 20px */
+		margin: 5px 5px 5px 0; /* para a esquerda não está adicionado espaço, pois já têm 20px */
 	}
 }
 
