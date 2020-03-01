@@ -70,6 +70,11 @@ body {
 
 /* Menu Principal */
 
+.main-container {
+	margin-bottom: 40px;
+	display: flex; /* dizendo que irá utilizar o design do flexbox */
+}
+
 .main-container::before, .main-container::after {
 	content: '';
 	display: table;
@@ -225,3 +230,15 @@ body {
 }
 
 /* Fim Produtos */
+
+/* Rodapé */
+
+.rodape {
+	font-size: 1.125em;
+	text-align: center;
+	padding: 40px 0;
+	line-height: 1.4em;
+	background-color: #d6d3c8;
+}
+
+/* Fim Rodapé */
